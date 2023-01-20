@@ -17,8 +17,9 @@ public class Main extends Application {
         Scene sc = new Scene(root, 30, 800);
         primaryStage.setScene(sc);
         primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setAlwaysOnTop(true);
         EventHandler handler = new DragWin(primaryStage);
-        root.setStyle("-fx-background-color: #61cccd;-fx-opacity: 0.8");
+        root.setStyle("-fx-background-color: #6163cc;-fx-opacity: 0.7");
         sc.setFill(null);
         sc.setOnMousePressed(handler);
         sc.setOnMouseDragged(handler);
