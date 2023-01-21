@@ -23,5 +23,6 @@ public:
 private:
     Ui::MainScruler *ui;
     QPoint winPosition;
+    bool isvertical {true};
 };
 #endif // MAINSCRULER_H

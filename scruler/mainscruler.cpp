@@ -24,12 +24,19 @@ void MainScruler::keyPressEvent(QKeyEvent * event)
         this->close();
         break;
     case Qt::Key_G:
-        if ((event->modifiers() == Qt::ControlModifier)) {
+//        (event->modifiers() == Qt::ControlModifier) &&
+        if (isvertical == true) {
             this->setMinimumSize(1200,30);
             this->setMaximumSize(1200,30);
+            this->move((this->pos().x() - 600) < 0 ? 0 : this->pos().x() - 600,
+                       (this->pos().y() + 350) < 0 ? 0 : this->pos().y() + 350);
+            isvertical = false;
         } else {
             this->setMinimumSize(30,700);
             this->setMaximumSize(30,700);
+            this->move((this->pos().x() + 600) < 0 ? 0 : this->pos().x() + 600,
+                       (this->pos().y() - 350) < 0 ? 0 : this->pos().y() - 350);
+            isvertical = true;
         }
         break;
 
