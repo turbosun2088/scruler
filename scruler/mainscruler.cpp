@@ -6,7 +6,7 @@ MainScruler::MainScruler(QWidget *parent)
     , ui(new Ui::MainScruler)
 {
     ui->setupUi(this);
-    this->setWindowFlag(Qt::FramelessWindowHint);
+    this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     this->setWindowOpacity(0.7);
     this->setStyleSheet("background-color:#6163cc;");
     this->move(500,10);
